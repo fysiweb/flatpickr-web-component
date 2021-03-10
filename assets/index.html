@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flatpickr Example</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+
+    <script src="../dist/flatpickr-web-component.js"></script>
+  </head>
+  <body>
+    <div>
+      <date-time-picker
+        id="picker"
+        theme="material_red"
+        altInput
+        enableTime
+        mode="range"
+        time_24hr
+      />
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("picker")
+      .addEventListener("selectedDates", (event) => {
+        console.log("Got dateTimes:", event.detail);
+      });
+  </script>
+</html>

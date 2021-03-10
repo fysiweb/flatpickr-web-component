@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesLnSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "lib": [
+      "dom",
+      "es2020"
+    ]
+  }
+}
