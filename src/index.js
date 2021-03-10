@@ -78,7 +78,7 @@ customElements.define(
           onChange: (selectedDates, dateStr, instance) =>
             this.dispatchEvent(
               new CustomEvent("selectedDates", {
-                detail: selectedDates,
+                detail: selectedDates.map((date) => date.getTime()),
               })
             ),
         });
