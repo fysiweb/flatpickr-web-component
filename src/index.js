@@ -50,6 +50,12 @@ customElements.define(
       this._shadowRoot.appendChild(container);
     }
 
+    clear() {
+      if (this.picker) {
+        this.picker.clear();
+      }
+    }
+
     connectedCallback() {
       const element = this._shadowRoot.getElementById("picker");
       if (element) {
@@ -60,7 +66,7 @@ customElements.define(
           )
         );
 
-        flatpickr(element, {
+        this.picker = flatpickr(element, {
           allowInput: this.hasAttribute("allowInput"),
           altFormat: this.getAttribute("altFormat") || "j. F Y H:i",
           altInput: this.hasAttribute("altInput"),

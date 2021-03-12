@@ -23,12 +23,17 @@
         time_24hr
       />
     </div>
+    <button id="clearButton">Clear</button>
   </body>
   <script>
+    const picker = document.getElementById("picker");
+
+    picker.addEventListener("selectedDates", (event) => {
+      console.log("Got dateTimes:", event.detail);
+    });
+
     document
-      .getElementById("picker")
-      .addEventListener("selectedDates", (event) => {
-        console.log("Got dateTimes:", event.detail);
-      });
+      .getElementById("clearButton")
+      .addEventListener("click", () => picker.clear());
   </script>
 </html>
