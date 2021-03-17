@@ -1,7 +1,7 @@
 let
   devops = builtins.fetchGit {
     url = "ssh://git@github.com/fysiweb/devops";
-    rev = "44b1d6c9dd6b8710a75f07fbe73acd3380025abd";
+    rev = "b8653783e9698cf6e174751751f748e20595a694";
   };
   pkgs = import <nixpkgs> {
     overlays = [
