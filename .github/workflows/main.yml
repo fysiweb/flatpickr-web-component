@@ -19,5 +19,6 @@ jobs:
     - run: nix-shell --run publish-component
       if: github.ref == 'refs/heads/master'
       env:
+        CDN_PURGE_CREDENTIALS: ${{ secrets.CDN_PURGE_CREDENTIALS }}
         ENV: production
         SAS_TOKEN: ${{ secrets.SAS_TOKEN }}
